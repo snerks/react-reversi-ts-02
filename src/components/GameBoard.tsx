@@ -455,7 +455,7 @@ class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
         }
 
         const currentPlayerContent = (
-            <div className="row" /* role="alert" */ style={{ background: '#090' }}>
+            <div className="row" /* role="alert" */ style={{ background: '#090', marginLeft: '0', marginRight: '0' }}>
                 {
                     isGameFinished &&
                     <div className="col-md-12">
@@ -490,7 +490,7 @@ class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
                 </div>
                 <div className="col-md-12" style={{ fontSize: '20px' }}>
                     <div className="row">
-                        <div className="col-md-12">
+                        <div className="col-sm-12">
                             <button
                                 onClick={() => this.restart()}
                                 style={{ width: '400px', margin: '5px' }}
@@ -501,7 +501,7 @@ class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
                         {
                             !isGameFinished &&
                             <div className="row">
-                                <div className="col-md-12">
+                                <div className="col-sm-12">
                                     <button
                                         onClick={() => this.selectRandomValidCell()}
                                         style={{
@@ -514,7 +514,7 @@ class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
                                         Select Random Valid Cell
                                     </button>
                                 </div>
-                                <div className="col-md-12">
+                                <div className="col-sm-12">
                                     <button
                                         onClick={() => this.pass()}
                                         style={{ width: '400px', margin: '5px' }}

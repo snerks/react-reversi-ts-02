@@ -40,7 +40,7 @@ class App extends React.Component<{}, {}> {
       <div className="container">
 
         <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
-          <button className="navbar-toggler navbar-toggler-right"
+          {/* <button className="navbar-toggler navbar-toggler-right"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -48,7 +48,7 @@ class App extends React.Component<{}, {}> {
             aria-expanded="false"
             aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
-          </button>
+          </button> */}
 
           <a className="navbar-brand" href="#">Reversi TypeScript React Redux</a>
 
