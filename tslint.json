@@ -1,4 +1,9 @@
 {
+  "interface-name": [true, "never-prefix"],
+  "ordered-imports": [false, {
+    "import-sources-order": "any",
+    "named-imports-order": "case-insensitive"
+  }],
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "linterOptions": {
     "exclude": [
