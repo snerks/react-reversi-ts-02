@@ -3,12 +3,13 @@
 /* tslint:disable:object-literal-sort-keys */
 /* tslint:disable:jsx-no-lambda */
 
-import GameCell from './GameCell';
+// import GameCell from './GameCell';
 import { GameCellIsWhiteStatus } from '../types/CustomTypes';
 import { initialGameBoard } from './GamePage';
 
 import './GameBoard.css';
 import * as React from 'react';
+import GameCell from './GameCell';
 
 export interface GameBoardProps {
     board: GameCellIsWhiteStatus[];
@@ -458,7 +459,7 @@ class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
             <div className="row" /* role="alert" */ style={{ background: '#090', marginLeft: '0', marginRight: '0' }}>
                 {
                     isGameFinished &&
-                    <div className="col-md-12">
+                    <div className="col-sm-12">
                         <div style={{ fontSize: '20px', color: winnerName }}>
                             <span>Winner is {winnerName}!</span>
                         </div>
@@ -466,7 +467,7 @@ class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
                 }
                 {
                     isGameFinished && this.state.passCount > 1 &&
-                    <div className="col-md-12">
+                    <div className="col-sm-12">
                         <div style={{ fontSize: '20px', color: winnerName }}>
                             <span>Both players have passed - game finished early</span>
                         </div>
@@ -474,13 +475,13 @@ class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
                 }
                 {
                     !isGameFinished &&
-                    <div className="col-md-12">
+                    <div className="col-sm-12">
                         <div style={{ fontSize: '20px', color: discColor }}>
                             <span>Current Player: {discContent}</span>
                         </div>
                     </div>
                 }
-                <div className="col-md-12">
+                <div className="col-sm-12">
                     <div style={{ fontSize: '20px', color: 'white' }}>
                         <div>White: <span>{whitePlayerCells.length}</span></div>
                     </div>
@@ -488,24 +489,24 @@ class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
                         <div>Black: <span>{blackPlayerCells.length}</span></div>
                     </div>
                 </div>
-                <div className="col-md-12" style={{ fontSize: '20px' }}>
+                <div className="col-sm-12" style={{ fontSize: '20px' }}>
                     <div className="row">
                         <div className="col-sm-12">
                             <button
                                 onClick={() => this.restart()}
-                                style={{ width: '400px', margin: '5px' }}
+                                style={{ width: '80%', margin: '5px' }}
                             >
                                 Restart
                             </button>
                         </div>
                         {
                             !isGameFinished &&
-                            <div className="row">
-                                <div className="col-sm-12">
+                            <div className="col-sm">
+                                <div>
                                     <button
                                         onClick={() => this.selectRandomValidCell()}
                                         style={{
-                                            width: '400px', margin: '5px',
+                                            width: '80%', margin: '5px',
                                             cursor: this.state.validCells.length === 0 ?
                                                 'not-allowed' : 'auto'
                                         }}
@@ -514,10 +515,10 @@ class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
                                         Select Random Valid Cell
                                     </button>
                                 </div>
-                                <div className="col-sm-12">
+                                <div>
                                     <button
                                         onClick={() => this.pass()}
-                                        style={{ width: '400px', margin: '5px' }}
+                                        style={{ width: '80%', margin: '5px' }}
                                     >
                                         {
                                             this.state.validCells.length === 0 && (

@@ -2,7 +2,6 @@
 /* tslint:disable:interface-name */
 /* tslint:disable:object-literal-sort-keys */
 /* tslint:disable:jsx-no-lambda */
-
 import * as React from 'react';
 
 export interface GameCellProps {

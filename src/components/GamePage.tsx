@@ -1,9 +1,4 @@
-/* tslint:disable:ordered-imports */
-/* tslint:disable:interface-name */
-/* tslint:disable:object-literal-sort-keys */
-/* tslint:disable:jsx-no-lambda */
 /* tslint:disable:no-empty-interface */
-
 import * as React from 'react';
 
 import { GameCellIsWhiteStatus } from '../types/CustomTypes';
